@@ -85,8 +85,6 @@ mazes = [
 
 
 # Output the mazes
-
-
 def print_mazes(mazes, stdscr, path=[]):
     BLUE = curses.color_pair(1)
     RED = curses.color_pair(2)
@@ -104,8 +102,6 @@ def print_mazes(mazes, stdscr, path=[]):
                 pass
 
 # Find starting position
-
-
 def find_start(mazes, start):
     for i, row in enumerate(mazes):
         for j, value in enumerate(row):
@@ -165,8 +161,6 @@ def find_path(mazes, stdscr):
     return None, None  # X not found
 
 # Adjacent Movement
-
-
 def find_neighbours(mazes, row, col):
     neighbours = []
 
@@ -200,5 +194,6 @@ def main(stdscr):
     exit()
     # stdscr.getch()  # Wait, get character, then exit.
 
-
 wrapper(main)  # Initialize curses model, call main function
+
+
